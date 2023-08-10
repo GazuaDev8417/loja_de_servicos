@@ -67,7 +67,7 @@ const List = ():JSX.Element=>{
             />
         <Container>
             <InputContainer>
-                <input type='text' onChange={handleTitle} value={title} 
+                <input type='search' onChange={handleTitle} value={title} 
                     placeholder='Titulo do serviço                  🔎'/>                 
             </InputContainer>
             <CartaoContainer>

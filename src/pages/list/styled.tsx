@@ -40,6 +40,10 @@ export const InputContainer = styled.div`
         border-radius: 20px;
         margin: 10px;
         padding-left: 15px;
+
+        @media(max-width: 600px){
+            margin-top: 10vh;
+        }
     }
 
     select{
@@ -89,6 +93,7 @@ export const Cartao = styled.div`
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+
     &:hover{
         transform: scale(1.1);
         color: goldenrod;
