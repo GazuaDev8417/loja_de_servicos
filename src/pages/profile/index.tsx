@@ -109,7 +109,7 @@ const Profile = ()=>{
 
         if(confirmar){
             localStorage.clear()
-            navigate('/')
+            navigate('/loja_de_servicos')
         }
     }
 
