@@ -191,6 +191,10 @@ Error generating stack: `+o.message+`
         border-radius: 20px;
         margin: 10px;
         padding-left: 15px;
+
+        @media(max-width: 600px){
+            margin-top: 10vh;
+        }
     }
 
     select{
@@ -237,6 +241,7 @@ Error generating stack: `+o.message+`
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+
     &:hover{
         transform: scale(1.1);
         color: goldenrod;
@@ -260,7 +265,7 @@ Error generating stack: `+o.message+`
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-`,kT=()=>{const e=No(),{states:t,setters:n,requests:r}=M.useContext(bo),i=t.services,[o,s]=M.useState("");M.useEffect(()=>{localStorage.getItem("id")||e("/"),r.getAllJobs(),document.title="Lista de Serviços"},[]);const a=d=>{s(d.target.value)},u=d=>{er.get(`${tr}/job/${d.id}`,{headers:{Authorization:localStorage.getItem("id")}}).then(h=>{n.setJob(h.data),e("/detail")}).catch(h=>{alert(h.response.data)})},c=i&&i.filter(d=>d.title.toLowerCase().includes(o.toLocaleLowerCase()));return L.jsxs(L.Fragment,{children:[L.jsx(Kl,{leftIcon:L.jsx(yv,{className:"icon",onClick:()=>e("/regist")}),title:"Lista de Serviços",rightIcon:L.jsx(_v,{className:"icon",onClick:()=>e("/profile")})}),L.jsxs(wT,{children:[L.jsx(ST,{children:L.jsx("input",{type:"text",onChange:a,value:o,placeholder:"Titulo do serviço                  🔎"})}),L.jsx(xT,{children:c&&c.map(d=>L.jsxs(TT,{children:[L.jsx(AT,{children:d.title}),L.jsxs("div",{className:"card-content",children:[L.jsx("b",{children:"Descrição: "}),d.description,L.jsx("br",{}),L.jsx("br",{}),L.jsx("b",{children:"Contato: "}),mv(String(d.phone)),L.jsx("br",{}),L.jsx("br",{}),L.jsx("b",{children:"Horário de atendimento: "}),d.period]}),L.jsx("button",{className:"btn btn-primary",onClick:()=>u(d),children:"Entrar em contato"})]},d.id))})]})]})},OT=Ce.div`
+`,kT=()=>{const e=No(),{states:t,setters:n,requests:r}=M.useContext(bo),i=t.services,[o,s]=M.useState("");M.useEffect(()=>{localStorage.getItem("id")||e("/"),r.getAllJobs(),document.title="Lista de Serviços"},[]);const a=d=>{s(d.target.value)},u=d=>{er.get(`${tr}/job/${d.id}`,{headers:{Authorization:localStorage.getItem("id")}}).then(h=>{n.setJob(h.data),e("/detail")}).catch(h=>{alert(h.response.data)})},c=i&&i.filter(d=>d.title.toLowerCase().includes(o.toLocaleLowerCase()));return L.jsxs(L.Fragment,{children:[L.jsx(Kl,{leftIcon:L.jsx(yv,{className:"icon",onClick:()=>e("/regist")}),title:"Lista de Serviços",rightIcon:L.jsx(_v,{className:"icon",onClick:()=>e("/profile")})}),L.jsxs(wT,{children:[L.jsx(ST,{children:L.jsx("input",{type:"search",onChange:a,value:o,placeholder:"Titulo do serviço                  🔎"})}),L.jsx(xT,{children:c&&c.map(d=>L.jsxs(TT,{children:[L.jsx(AT,{children:d.title}),L.jsxs("div",{className:"card-content",children:[L.jsx("b",{children:"Descrição: "}),d.description,L.jsx("br",{}),L.jsx("br",{}),L.jsx("b",{children:"Contato: "}),mv(String(d.phone)),L.jsx("br",{}),L.jsx("br",{}),L.jsx("b",{children:"Horário de atendimento: "}),d.period]}),L.jsx("button",{className:"btn btn-primary",onClick:()=>u(d),children:"Entrar em contato"})]},d.id))})]})]})},OT=Ce.div`
     text-align: center;
     
     form{
