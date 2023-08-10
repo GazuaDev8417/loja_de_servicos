@@ -123,7 +123,7 @@ const Profile = ()=>{
     return(
         <>
         <DefaultHeader
-            leftIcon={<BsCardList onClick={()=> navigate('/lista')} className='icon' />}
+            leftIcon={<BsCardList onClick={()=> navigate('/list')} className='icon' />}
             title='Perfil'
             rightIcon={<AiOutlineLogout onClick={logout} className='icon' />}
         />

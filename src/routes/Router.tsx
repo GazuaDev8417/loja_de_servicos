@@ -9,7 +9,7 @@ import DetailService from "../pages/detail/DeatilService"
 const Router:React.FC = ()=>{
     return(
         <Routes>
-            <Route path='/' element={<Login/>}/>
+            <Route path='/loja_de_servicos' element={<Login/>}/>
             <Route path='/list' element={<List/>}/>
             <Route path='/regist' element={<RegistServices/>}/>
             <Route path='/profile' element={<Profile/>}/>
