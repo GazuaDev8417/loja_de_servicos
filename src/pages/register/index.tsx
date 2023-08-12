@@ -30,7 +30,8 @@ const RegistServices = ():JSX.Element=>{
 
     useEffect(()=>{
         if(!localStorage.getItem('id')){
-            navigate('/')
+            navigate('/login')
+            alert('Necessário efetuar login')
         }
 
         document.title = 'Cadastro de Serviços'
@@ -61,7 +62,7 @@ const RegistServices = ():JSX.Element=>{
             data: body
         }).then(()=>{
             requests.getAllJobs()
-            navigate('/')
+            navigate('/loja_de_servicos')
             setForm({
                 title:'',
                 description:'',
@@ -77,15 +78,15 @@ const RegistServices = ():JSX.Element=>{
     return(
         <>
         <DefaultHeader
-            leftIcon={<BsCardList onClick={()=> navigate('/list')} className='icon'/>}
+            leftIcon={<BsCardList onClick={()=> navigate('/loja_de_servicos')} className='icon'/>}
             title='Cadastrar Serviço'
             rightIcon={<BsFillPersonFill onClick={()=> navigate('/profile')} className='icon'/>}/>
         <Container>
             <form onSubmit={regist}>
                 <fieldset>
-                    <input type='text' name='titulo' value={form.title} onChange={onChange}
+                    <input type='text' name='title' value={form.title} onChange={onChange}
                         placeholder='Nome do serviço' required/>
-                    <textarea name='desciption' value={form.description} onChange={onChange}
+                    <textarea name='description' value={form.description} onChange={onChange}
                         placeholder='Descricao' required/>
                     <input type='tel' name='phone' value={form.phone} onChange={onChange}
                         placeholder='DDD e telefone' required/>

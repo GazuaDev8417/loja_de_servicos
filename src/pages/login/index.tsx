@@ -24,7 +24,7 @@ const Login = ():JSX.Element=>{
         const token = localStorage.getItem('id')
 
         if(token){
-            navigate('/list')
+            navigate('/loja_de_servicos')
         }
 
         document.title = 'Login'
@@ -47,7 +47,7 @@ const Login = ():JSX.Element=>{
 
         axios.post(`${BASE_URL}/login`, body).then(res=>{
             localStorage.setItem('id', res.data)
-            navigate('/list')
+            navigate('/loja_de_servicos')
         })
     }
 

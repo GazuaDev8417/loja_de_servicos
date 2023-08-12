@@ -19,18 +19,14 @@ const DetailService = ():JSX.Element=>{
     const message = `Olá, vi seu serviço anunciado no aplicativo Loja de Serviços e gostaria de contratá-lo`
 
 
-    useEffect(()=>{
-        if(!localStorage.getItem('id')){
-            navigate('/')
-        }
-    }, [])
 
     return(
         <>
         <DefaultHeader
             leftIcon={<IoIosArrowBack onClick={()=> navigate(-1)} className='icon'/>}
             title={servico.title}
-            rightIcon={<IoAddCircleOutline onClick={()=> navigate('/regist')} className='icon'/>}
+            rightIcon={localStorage.getItem('id') ? 
+                <IoAddCircleOutline onClick={()=> navigate('/regist')} className='icon'/> : <div/>}
         />
         <Container>
             <Cartao>

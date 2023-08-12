@@ -9,8 +9,8 @@ import DetailService from "../pages/detail/DeatilService"
 const Router:React.FC = ()=>{
     return(
         <Routes>
-            <Route path='/loja_de_servicos' element={<Login/>}/>
-            <Route path='/list' element={<List/>}/>
+            <Route path='/loja_de_servicos' element={<List/>}/>
+            <Route path='/login' element={<Login/>}/>
             <Route path='/regist' element={<RegistServices/>}/>
             <Route path='/profile' element={<Profile/>}/>
             <Route path='/detail' element={<DetailService/>}/>

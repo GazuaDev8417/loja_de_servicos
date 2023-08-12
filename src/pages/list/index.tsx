@@ -24,10 +24,7 @@ const List = ():JSX.Element=>{
     const [title, setTitle] = useState<string>('')
 
     
-    useEffect(()=>{
-        if(!localStorage.getItem('id')){
-            navigate('/')
-        }
+    useEffect(()=>{        
         requests.getAllJobs()
         
         document.title = 'Lista de Serviços'
@@ -63,7 +60,8 @@ const List = ():JSX.Element=>{
         <DefaultHeader
             leftIcon={<IoAddCircleOutline className='icon' onClick={()=> navigate('/regist')}/>}
             title="Lista de Serviços"
-            rightIcon={<BsFillPersonFill className='icon' onClick={()=> navigate('/profile')}/>}
+            rightIcon={localStorage.getItem('id') ?
+                <BsFillPersonFill className='icon' onClick={()=> navigate('/profile')}/> : <div/>}
             />
         <Container>
             <InputContainer>
