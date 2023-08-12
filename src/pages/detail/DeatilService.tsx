@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import Context from '../../global/Context'
 import { useNavigate } from 'react-router-dom'
 import DefaultHeader from '../../components/Header'

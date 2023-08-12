@@ -1,8 +1,10 @@
 import { FormEvent, useEffect, useState } from "react"
 import { useNavigate } from 'react-router-dom'
+import DefaultHeader from "../../components/Header"
 import axios from 'axios'
 import { BASE_URL } from "../../constants/urls"
-import { Container, BtnContainer, Head } from './styled'
+import { IoIosArrowBack } from 'react-icons/io'
+import { Container, BtnContainer } from './styled'
 
 
 
@@ -63,9 +65,8 @@ const Login = ():JSX.Element=>{
 
     return(
         <>
-        <Head>
-            Login
-        </Head>
+        <DefaultHeader leftIcon={<IoIosArrowBack className='icon' onClick={()=> navigate('/loja_de_servicos')}/>}
+            title='Login' rightIcon={<div/>}/>
         <Container>
             <form onSubmit={login}>
                 <fieldset>
