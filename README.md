@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Loja de Serviços Web
 
 Versão web da aplicação mobile loja de serviços com suas rescpetivas funcionalidades.
 
