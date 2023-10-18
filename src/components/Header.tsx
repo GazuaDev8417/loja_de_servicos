@@ -1,38 +1,19 @@
-import styled from 'styled-components'
+'use client'
+import styles from './Header.module.css'
 
 
-const Head = styled.div`
-  background-color: blue;  
-  font-size: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  box-shadow: 2px 2px 4px black;
-
-  @media(max-width: 600px){
-    font-size: 20px;
-    padding: 10px;
-    button {
-        padding: 7px;
-    }
-  }
-`
-
-interface DefaultHeaderProps{
+interface HeaderProps{
     leftIcon:any
     title:string
     rightIcon:any
 }
 
-const DefaultHeader:React.FC<DefaultHeaderProps> = ({ leftIcon, title, rightIcon })=>{
+export default function Header({ leftIcon, title, rightIcon }:HeaderProps):JSX.Element{
     return(
-        <Head>
-          {leftIcon}
-          {title}
-          {rightIcon}
-        </Head>
+        <div className={styles.head}>
+            {leftIcon}
+            <h1>{title}</h1>
+            {rightIcon}
+        </div>
     )
 }
-
-export default DefaultHeader

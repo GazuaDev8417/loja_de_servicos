@@ -1,0 +1,27 @@
+.container{
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.card{
+    width: 25%;
+    display: inline-block;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    box-shadow: 2px 2px 4px #918bcb; 
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px; 
+}
+
+.cardContent {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

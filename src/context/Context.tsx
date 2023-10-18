@@ -1,6 +1,7 @@
+'use client'
 import React, { createContext, useState } from 'react'
 import axios from 'axios'
-import { BASE_URL } from '../constants/urls'
+import { BASE_URL } from '@/constants/urls'
 
 
 const Context = createContext<any>(null)

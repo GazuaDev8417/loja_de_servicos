@@ -1,4 +1,4 @@
-export const convertPhone = (phone:string)=>{
+export const convertPhone = (phone:string):string=>{
     const phoneToStr = phone.toString()
 
     const ddd = phoneToStr.substring(0,2)
