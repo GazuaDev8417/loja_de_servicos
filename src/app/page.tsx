@@ -8,8 +8,8 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
   const router = useRouter()
   const [form, setForm] = useState({
-    email:'',
-    password:''
+    email:'visitante@email.com',
+    password:'123456'
   })
 
 

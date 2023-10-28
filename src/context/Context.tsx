@@ -28,22 +28,12 @@ export const GlobalState:React.FC<GlobalStateProps> = (props)=>{
     
 
 
-    const getAllJobs = ()=>{
-        axios.get(`${BASE_URL}/jobs`, {
-            headers: {
-                Authorization: localStorage.getItem('id')
-            }
-        }).then(res=>{
-            setServices(res.data)
-        }).catch(e=>{
-            alert(e.response.data)
-        })
-    }
+    
 
 
     const states = { services, job }
     const setters = { setJob }
-    const requests = { getAllJobs }
+    const requests = {  }
 
 
     return(

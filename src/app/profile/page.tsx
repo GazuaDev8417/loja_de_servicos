@@ -53,6 +53,10 @@ export default function Profil(){
 
             if(!res.ok){
                 const failed = await res.text()
+                if(failed === 'jwt expired'){
+                    return alert('Seu token de acesso expirou, faça login novamente.')
+                }
+                
                 return alert(failed)
             }
 
@@ -71,6 +75,10 @@ export default function Profil(){
 
             if(!res.ok){
                 const failed = await res.text()
+                if(failed === 'jwt expired'){
+                    return alert('Seu token de acesso expirou, faça login novamente.')
+                }
+                
                 return alert(failed)
             }
 

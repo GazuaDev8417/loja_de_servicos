@@ -49,8 +49,14 @@ export default function RegistJob(){
                 },
                 body: JSON.stringify(body)
             })
+            
             if(!res.ok){
-                return alert('Erro ao cadastrar serviço!')
+                const failed = await res.text()
+                if(failed === 'jwt expired'){
+                    return alert('Seu token de acesso expirou, faça login novamente.')
+                }
+                
+                return alert(failed)
             }
 
             const data = await res.text()
