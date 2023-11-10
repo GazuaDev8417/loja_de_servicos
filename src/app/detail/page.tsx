@@ -1,5 +1,5 @@
 'use client'
-import Context from "@/context/Context"
+import Context, { ContextContent } from "@/context/Context"
 import { useContext } from "react"
 import { IoIosArrowBack, IoLogoWhatsapp } from 'react-icons/io'
 import { useRouter } from "next/navigation"
@@ -11,7 +11,7 @@ import { convertPhone } from "@/utils/convertPhone"
 
 export default function Detail(){
     const router = useRouter()
-    const { states } = useContext(Context)
+    const { states } = useContext(Context) as ContextContent
     const job = states.job
     const message = `Olá, vi seu serviço anunciado no aplicativo Loja de Serviços e gostaria de contratá-lo`
     
