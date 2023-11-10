@@ -23,7 +23,7 @@ export default function Detail(){
                             className='icon'
                             onClick={()=> router.back()}
                             />}
-                title={job.title}
+                title={job?.title}
                 rightIcon={<div/>}
                 />
             <div className={styles.container}>
