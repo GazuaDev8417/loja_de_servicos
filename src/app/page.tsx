@@ -57,7 +57,10 @@ export default function Login(){
 
   return(
       <>
-        <Header leftIcon={<div/>} title='Login' rightIcon={<div/>}/>
+        <Header 
+          leftIcon={<div/>} 
+          title='Login' 
+          rightIcon={<div/>}/>
         <div className={styles.container}>
           <form className={styles.form} 
             onSubmit={login}>
