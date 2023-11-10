@@ -1,0 +1,9 @@
+{
+  "/_not-found": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/list/page": "/list",
+  "/detail/page": "/detail",
+  "/profile/page": "/profile",
+  "/registJob/page": "/registJob"
+}
