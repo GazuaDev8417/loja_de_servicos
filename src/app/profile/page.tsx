@@ -5,7 +5,7 @@ import { BsCardList } from 'react-icons/bs'
 import { MdDelete } from 'react-icons/md'
 import { useRouter } from "next/navigation"
 import { useContext, useEffect, useState } from "react"
-import Context, { Job } from "@/context/Context"
+import Context, { ContextContent, Job } from "@/context/Context"
 import { BASE_URL } from "@/constants/urls"
 import styles from './profile.module.css'
 
@@ -21,7 +21,7 @@ interface User{
 
 
 export default function Profil(){
-    const { setters } = useContext(Context)
+    const { setters } = useContext(Context) as ContextContent
     const router = useRouter()
     const [jobs, setJobs] = useState<Job[]>([])
     const [title, setTitle] = useState<string>('')

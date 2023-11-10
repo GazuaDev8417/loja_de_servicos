@@ -6,13 +6,13 @@ import { useRouter } from "next/navigation"
 import { BASE_URL } from "@/constants/urls"
 import { ChangeEvent, useContext, useEffect, useState } from "react"
 import styles from './list.module.css'
-import Context, { Job } from "@/context/Context"
+import Context, { ContextContent, Job } from "@/context/Context"
 import { convertPhone } from "@/utils/convertPhone"
 
 
 
 export default function List(){
-    const { setters } = useContext(Context)
+    const { setters } = useContext(Context) as ContextContent
     const router = useRouter()
     const [title, setTitle] = useState<string>('')
     const [jobs, setJobs] = useState<Job[]>([])
